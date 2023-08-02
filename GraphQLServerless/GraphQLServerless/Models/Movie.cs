@@ -19,10 +19,10 @@ namespace GraphQLServerless.Models
 
         [DynamoDBProperty("genre")]
         [DynamoDBIgnore]
-        public IEnumerable<string>? Genre { get; set; } = Enumerable.Empty<string>();
+        public IEnumerable<string> Genre { get; set; } = Enumerable.Empty<string>();
 
         [DynamoDBProperty("cast")]
         [DynamoDBIgnore]
-        public IEnumerable<string>? Cast { get; set; } = Enumerable.Empty<string>();
+        public IEnumerable<string> Cast { get; set; } = Enumerable.Empty<string>();
     }
 }

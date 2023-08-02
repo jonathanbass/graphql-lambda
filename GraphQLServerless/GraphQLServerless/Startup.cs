@@ -22,6 +22,7 @@ public class Startup
         services.AddAWSService<IAmazonDynamoDB>();
         services.AddSingleton<IDynamoDBContext, DynamoDBContext>();
         services.AddSingleton<IDataRepository, DataRepository>();
+        services.AddErrorFilter<GraphQLErrorFilter>();
         services.AddGraphQLServer()
             .AddQueryType<MovieService>()
             .AddMutationType<MutationType>()

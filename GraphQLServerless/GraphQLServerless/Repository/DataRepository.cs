@@ -21,8 +21,8 @@ namespace GraphQLServerless.Repository
 
         public async Task DeleteMovie(string id)
         {
-            var student = await _dynamoDbContext.LoadAsync<Movie>(id);
-            await _dynamoDbContext.DeleteAsync(student);
+            var movie = await _dynamoDbContext.LoadAsync<Movie>(id);
+            await _dynamoDbContext.DeleteAsync(movie);
         }
 
         public async Task<Movie> GetMovie(string id)
